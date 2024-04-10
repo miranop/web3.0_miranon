@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>掛け算</title>
+</head>
+<body>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+        
+        table, th, td {
+            border: 1px solid black;
+            padding: 8px;
+        }
+        </style>
+
+    <h2>掛け算を表示します</h2>
+    <table id = "multipi"></table>
+
+    <script>
+        var table = document.getElementById("multipi");
+
+        
+        // 乗算表を作成
+        for (var i = 1; i <= 12; i++) {
+            var row = table.insertRow();
+            for (var j = 1; j <= 12; j++) {
+                var cell = row.insertCell();
+                if (j === 0) {
+                    cell.appendChild(document.createTextNode(i));
+                } else {
+                    cell.appendChild(document.createTextNode(i * j));
+                }
+            }
+        }
+    </script>
+    
+</body>
+</html>
